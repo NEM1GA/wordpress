@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   namespace: argocd
-  name: wordpress-prod-sv
+  name: wordpress-prod-ib
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: 'https://sergeisv.jfrog.io/artifactory/api/helm/wordpress-helm'
+    repoURL: 'https://ibombel.jfrog.io/artifactory/api/helm/wordpress-helm'
     chart: wordpress-ib
     targetRevision: 0.*
   destination:
