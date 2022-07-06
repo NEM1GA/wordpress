@@ -8,12 +8,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://ibombel.jfrog.io/artifactory/api/helm/wordpress-helm'
+    repoURL: 'https://ibombel.jfrog.io/artifactory/wordpress-helm/'
     chart: wordpress-ib
-    targetRevision: 0.*
+    targetRevision: 0.0.4
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: wp-prod
+    namespace: wordpress
   syncPolicy:
     automated:
       prune: true

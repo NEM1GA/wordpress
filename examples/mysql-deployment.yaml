@@ -27,7 +27,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /mnt/IT-Academy/nfs-data/sa2-19-22/Ilya_Bombel/mysql-prod
+    path: /mnt/IT-Academy/nfs-data/sa2-19-22/ilya_bombel/mysql-prod
     server: 192.168.37.105
 ---
 apiVersion: v1
