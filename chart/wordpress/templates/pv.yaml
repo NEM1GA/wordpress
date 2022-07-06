@@ -13,5 +13,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /mnt/IT-Academy/nfs-data/sa2-20-22/Ilya_Bombel/wordpress-prod
+    path: /mnt/IT-Academy/nfs-data/sa2-20-22/ilya_bombel/wordpress-prod
     server: 192.168.37.105

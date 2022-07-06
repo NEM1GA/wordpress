@@ -50,3 +50,14 @@ jobs:
     - name: Publish Helm Chart
       run: |
         curl -H "X-JFrog-Art-Api:${{ secrets.X_JFROG_ART_API }}" -T $(find . -name 'wordpress*.tgz') "https://ibombel.jfrog.io/artifactory/wordpress-helm/$(find . -name 'wordpress*.tgz')"
+
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: slack-notif
+        SLACK_COLOR: ${{ job.status }}
+        SLACK_ICON: https://github.com/rtCamp.png?size=48
+        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_TITLE: 'Looks like job is done :)'
+        SLACK_USERNAME: Ilya Bombel
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
