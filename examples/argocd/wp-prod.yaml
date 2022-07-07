@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: 'https://ibombel.jfrog.io/artifactory/wordpress-helm/'
     chart: wordpress-ib
-    targetRevision: 0.0.4
+    targetRevision: 0.0.6
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: wordpress
