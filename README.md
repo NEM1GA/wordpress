@@ -30,7 +30,7 @@ Docker, Helm
 
 ---
 ## Pipeline high level design:
-![diagr.PNG](./diagr.PNG)
+![diagr.png](./diagr.png)
 
 ## CI/CD pipeline description:
 As soon as push received in branch "main" to project GIT repo, Github actions runs ci/cd pipeline: repo checkout > automatically bump realise version and push tag > build docker image and pushe it to DockerHub > install helm and check out a helm chart by kubeval >  Helm creates a new artifact and push it to Jfrog Artifactory > send a success Slack notification, along with pipeline will fails, we will receive an alert notification in Slack.
